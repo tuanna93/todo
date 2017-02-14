@@ -21,9 +21,11 @@ class ItemCreated implements ShouldBroadcast
      * @return void
      */
     public $id;
+    public $title;
     public function __construct(Item $item)
     {
         $this->id = $item->id;
+        $this->title = $item->title;
     }
 
     /**

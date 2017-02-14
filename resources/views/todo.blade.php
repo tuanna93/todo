@@ -71,7 +71,7 @@
               cluster: 'ap1',
               encrypted: true
             });
-             var channel = pusher.subscribe('my-channel');
+             var channel = pusher.subscribe('todo-channel');
             channel.bind('App\\Events\\ItemCreated', function(data) {
                 var html = '<li class="list-group-item" idtitle="'+data.id+'"><a class="badge delete_Item" href="#" ><span class="glyphicon glyphicon-remove" ></span></a><span class="pull-left" id="li-title" >'+data.title+'</span></li>';
                 $('#itemsList').children().append(html);
